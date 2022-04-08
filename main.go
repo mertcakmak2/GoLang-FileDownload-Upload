@@ -19,6 +19,18 @@ func main() {
 
 	secureStaticFs := router.Group("/", authMiddleware)
 	secureStaticFs.StaticFS("preview-file", http.Dir("public"))
+	/*
+				/download			/previef-file
+
+		docx	download file		download file
+		txt		download file		preview file in tab
+		png		download file		preview file in tab
+		pdf		download file		preview file in tab
+		json	download file		preview file in tab
+		xslx	download file		download file
+		zip		download file		download file
+		yaml	download file		preview file in tab
+	*/
 	router.Run(":8080")
 }
 
