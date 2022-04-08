@@ -20,7 +20,7 @@ func main() {
 	secureStaticFs := router.Group("/", authMiddleware)
 	secureStaticFs.StaticFS("preview-file", http.Dir("public"))
 	/*
-				/download			/previef-file
+				/download			/preview-file
 
 		docx	download file		download file
 		txt		download file		preview file in tab
